@@ -26,6 +26,14 @@ Through this example workflow, you'll discover how to:
 
 Whether you're automating customer support, processing transactions, generating reports, or building intelligent assistants, this starter template shows you the foundation of what's possible with n8n.
 
+### Early Prototype Preview
+
+Here's an early prototype of the AI agent workflow showing the visual canvas and node connections:
+
+![n8n AI Agent Workflow Prototype](assets/screenshots/sc001.png)
+
+_The workflow demonstrates how chat triggers, AI agents, memory nodes, and tool integrations work together to create an intelligent automation._
+
 ## Prerequisites
 
 - Docker Desktop installed and running
@@ -164,25 +172,10 @@ To enable Google Sheets integration in the workflow, you need to create OAuth cr
 
 Edit the environment variables in `docker-compose.yml` or create a `.env` file based on `.env.example`.
 
-### Using PostgreSQL (Optional)
-
-To use PostgreSQL instead of the default SQLite:
-
-1. Uncomment the `postgres` service in `docker-compose.yml`
-2. Add these environment variables to the n8n service:
-   ```yaml
-   - DB_TYPE=postgresdb
-   - DB_POSTGRESDB_HOST=postgres
-   - DB_POSTGRESDB_PORT=5432
-   - DB_POSTGRESDB_DATABASE=n8n
-   - DB_POSTGRESDB_USER=n8n
-   - DB_POSTGRESDB_PASSWORD=n8n
-   ```
-
 ## Data Persistence
 
 - Workflows and credentials are stored in Docker volumes
-- Local directories `./workflows` and `./credentials` are mounted for easy access
+- Local directories `./workflows`
 
 ## Troubleshooting
 
