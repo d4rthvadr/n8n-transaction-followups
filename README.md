@@ -2,6 +2,30 @@
 
 This setup provides a local n8n instance using Docker Compose with a pre-built AI agent workflow template.
 
+## 🎯 Goal & Motivation
+
+This repository is designed to help you learn how **n8n can automate everyday business problems** through powerful workflow automation and AI orchestration.
+
+### Why n8n?
+
+Modern businesses face repetitive tasks that consume valuable time and resources. n8n empowers you to:
+
+- **Automate routine operations**: Customer follow-ups, data entry, report generation, and more
+- **Orchestrate AI capabilities**: Integrate AI models (like Google Gemini, OpenAI) to add intelligence to your workflows
+- **Connect your tools**: Seamlessly integrate 400+ apps and services (Google Sheets, Slack, email, databases, APIs)
+- **Build custom solutions**: Create tailored automation without complex coding
+
+### What You'll Learn
+
+Through this example workflow, you'll discover how to:
+
+1. **Build AI-powered chatbots** that can answer questions and take actions
+2. **Integrate multiple data sources** (APIs, spreadsheets, RSS feeds) into one intelligent agent
+3. **Use AI to make decisions** and route information based on context
+4. **Create scalable automations** that grow with your business needs
+
+Whether you're automating customer support, processing transactions, generating reports, or building intelligent assistants, this starter template shows you the foundation of what's possible with n8n.
+
 ## Prerequisites
 
 - Docker Desktop installed and running
