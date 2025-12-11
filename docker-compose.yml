@@ -9,17 +9,6 @@ services:
       - "5678:5678"
     env_file:
       - .env
-    # environment:
-    #   - N8N_BASIC_AUTH_ACTIVE=true
-    #   - N8N_BASIC_AUTH_USER=admin
-    #   - N8N_BASIC_AUTH_PASSWORD=admin
-    #   - N8N_HOST=localhost
-    #   - N8N_PORT=5678
-    #   - N8N_PROTOCOL=http
-    #   - NODE_ENV=development
-    #   - N8N_SECURE_COOKIE=false
-    #   - WEBHOOK_URL=http://localhost:5678/
-    #   - GENERIC_TIMEZONE=America/New_York
     volumes:
       - n8n_data:/home/node/.n8n
       - ./workflows:/home/node/.n8n/workflows
@@ -27,31 +16,9 @@ services:
     networks:
       - n8n-network
 
-  # Optional: PostgreSQL database for production-like setup
-  # Uncomment if you want to use PostgreSQL instead of SQLite
-  # postgres:
-  #   image: postgres:15
-  #   container_name: n8n-postgres
-  #   restart: unless-stopped
-  #   environment:
-  #     - POSTGRES_USER=n8n
-  #     - POSTGRES_PASSWORD=n8n
-  #     - POSTGRES_DB=n8n
-  #   volumes:
-  #     - postgres_data:/var/lib/postgresql/data
-  #   networks:
-  #     - n8n-network
-  #   healthcheck:
-  #     test: ["CMD-SHELL", "pg_isready -U n8n"]
-  #     interval: 10s
-  #     timeout: 5s
-  #     retries: 5
-
 volumes:
   n8n_data:
     driver: local
-  # postgres_data:
-  #   driver: local
 
 networks:
   n8n-network:
