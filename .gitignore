@@ -1,0 +1,9 @@
+# n8n credentials - DO NOT commit these
+credentials/*
+!credentials/.gitkeep
+
+# Environment variables
+.env
+
+# Docker volumes data
+n8n_data/
